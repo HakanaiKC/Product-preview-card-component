@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:ital,wght@0,300;0,500;0,700;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:ital,wght@0,300;0,500;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+
+:root {
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%)
+}
+
+.mb-16{
+    margin-bottom: 16px !important;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--cream);
+}
+
+.image-product-mobile{
+    display: none;
+}
+
+.wrapper {
+    width: 600px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    background-color: var(--white);
+}
+
+.image-product {
+    border-radius: 10px 0px 0px 10px
+}
+
+.right-row {
+    padding: 10px 30px;
+}
+
+.right-row h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+}
+
+.category,
+.description {
+    font-weight: 500;
+    color: var(--dark-grayish-blue)
+}
+
+.category {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.title{
+    line-height: 1;
+    color: var(--dark-blue)
+}
+
+.description{
+    line-height: 1.4;
+}
+
+.prices{
+    display: flex;
+    align-items: center;
+}
+
+.prices .left-price{
+    margin-right: 20px;
+    color: var(--dark-cyan);
+}
+
+.prices .right-price{
+    text-decoration: line-through;
+    color: var(--dark-grayish-blue)
+}
+
+.add-button{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: var(--dark-cyan);
+    border-color: var(--dark-cyan);
+    color: var(--white);
+    font-weight: 700;
+}
+
+.add-button:hover{
+    background-color: hsl(159, 36%, 20%);
+    border-color: hsl(158, 36%, 20%);
+}
+
+.icon-cart{
+    margin-right: 10px;
+}
+
+/* Mobile */
+
+@media (max-width: 425px) {
+    .image-product-mobile{
+        display: block;
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    .image-product{
+        display: none;
+    }
+
+    .wrapper{
+        display: block;
+        width: 300px;
+    }
+
+    .right-row{
+        padding: 20px;
+    }
+}
